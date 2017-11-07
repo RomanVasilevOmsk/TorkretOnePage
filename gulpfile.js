@@ -130,9 +130,9 @@ gulp.task('style:vendor', function(){
     return gulp
         .src([
             'src/stylus/vendor/normalize.styl',
-            'src/stylus/vendor/preloader.css',
-            'src/stylus/vendor/video.css',
-            'src/stylus/vendor/hover-min.css'
+            'src/stylus/vendor/preloader.css'
+            // 'src/stylus/vendor/video.css',
+            // 'src/stylus/vendor/hover-min.css'
         ])
         .pipe(stylus())
 

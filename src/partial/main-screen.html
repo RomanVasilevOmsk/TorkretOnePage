@@ -1,10 +1,14 @@
-<section class="main-screen">
-    <div id="trailer" class="is_overlay" >
-        <video id="video" width="100%" height="auto" autoplay="autoplay" loop="loop" preload="auto" muted>
-            <source src="video/video-bg.mp4"></source>
-            <source src="video/video-bg.webm" type="video/webm"></source>
-        </video>
+<div class="video-background">
+    <div class="video-foreground">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/gHckHBe6xU8?rel=0&amp;controls=0&showinfo=0&autoplay=1&loop=1&playlist=gHckHBe6xU8&mute=1" allowfullscreen ></iframe>
     </div>
+</div>
+
+<!--<div id="wrapper">-->
+<!--</div>-->
+<!--<div id="vidtop-content">-->
+<!--</div>-->
+<section class="main-screen">
 
     <div class="main-screen__inner">
         <figure class="main-screen__wrapper">
@@ -14,3 +18,30 @@
     </div>
     @@include('../partial/common/footer.html')
 </section>
+
+
+<style>
+    .video-background {
+        background: #000;
+        position: fixed;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -99;
+    }
+    .video-foreground,
+    .video-background iframe {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        pointer-events: none;
+    }
+    #vidtop-content {
+        top: 0;
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+        .video-foreground { height: 300%; top: -100%; }
+    }
+    @media (max-aspect-ratio: 16/9) {
+        .video-foreground { width: 300%; left: -100%; }
+    }
+</style>

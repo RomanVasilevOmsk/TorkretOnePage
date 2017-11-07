@@ -4,6 +4,9 @@
   min-height 100vh
   position relative
   overflow hidden
+  z-index 100
+  //background url(../images/main-bg-desc.jpg) no-repeat fixed
+  //background-size: cover
   @media (max-width: 550px)
     background url(../images/mobile-bg.jpg) no-repeat fixed
     background-size: cover
@@ -51,7 +54,12 @@
 
 
 @media (max-width: 550px){
-  #trailer{
+  #wrapper{
+    display: none;
+  }
+}
+@media (max-width: 550px){
+  #video-background{
     display: none;
   }
 }

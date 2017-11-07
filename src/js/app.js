@@ -20,11 +20,15 @@ $(document).ready(function(){
     };
 
     //---------Preloader-----------//
-//---------Video-----------//
-    var video =  document.getElementById('video');
-    video.addEventListener('click',function(){
-        video.play();
-    },false);
+// //---------Video-----------//
+//     $("document").ready(function() {
+//         var options = {  videoId: 'gHckHBe6xU8',
+//             start: 0,
+//             repeat: true
+//         };
+//
+//         $('#wrapper').tubular(options);
+//     });
 
 
 //---------Video-----------//
